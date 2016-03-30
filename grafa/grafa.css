@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	background-color: #EEEEEE;
+	border-bottom: 1px solid #E0E0E0;
+	margin-bottom: 50px;
+}
+
+header h1 {
+	text-align: center;
+  padding: 10px;
+	margin: auto;
+}
+
+#main {
+	width: 1100px;
+	margin: auto;
+}
+
+.left {
+	width: 40%;
+	float: left;
+}
+
+.grapharea {
+	display: none;
+}
+
+#selection {
+	height: 400px;
+}
+
+#selection button {
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: 80% auto;
+	background-position: center;
+	background-color: transparent;
+	border: none;
+}
+
+#selection button:hover {
+	cursor: pointer;
+	background-color: #F6F6F6;
+}
+
+#right {
+	width: 60%;
+	float: right;
+}
+
+#example {
+
+}
+
+#colors {
+	text-align: center;
+	margin: 20px 0;
+	width: 400px;
+}
+
+#colors button {
+	display:inline-block;
+	width:40px;
+	height:40px;
+	border-radius:20px;
+	border: 1px solid gray;
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.colorer {
+	margin-left: -84.5px;
+}
+
+#backbutton {
+	background-image: url(./images/arrow.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: white;
+}

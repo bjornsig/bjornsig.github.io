@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <title>Grafa</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="grafa.css">
+  <link rel="stylesheet" media="screen" href="./libraries/handsontable.full.css">
+  <script src="./libraries/handsontable.full.js"></script>
+  <script src="./libraries/Chart.js" charset="utf-8"></script>
+  <script src="./libraries/jscolor.js"></script>
+  <script src="grafa.js"></script>
+  <link rel="icon" type="image/png" href="./images/grafa.png">
+</head>
+<body>
+  <header>
+    <h1>Grafa</h1>
+  </header>
+  <div id="main">
+    <div class="left" id="selection">
+      <button style="background-image: url('./images/line.png')" onclick="selectLineGraph()"></button>
+      <button style="background-image: url('./images/bars.png')" onclick="selectBarGraph()"></button>
+      <button style="background-image: url('./images/pie.png')" onclick="selectPieGraph()"></button>
+      <!-- <button style="background-image: url('./images/doughnut.png')" onclick="selectDoughnutGraph()"></button> -->
+    </div>
+    <div class="left grapharea" id="linegrapharea">
+      <canvas class="graph" id="linegraph" width="400" height="400"></canvas>
+      <div id="colors">
+        <button id="backbutton" onclick="backToSelection()"></button>
+        <button class="jscolor {valueElement:'valueSpan', mode:'HS', position:'top', shadow: false, borderRadius: false, onFineChange:'changeFillColor(this)', value:'00ff00'}"></button>
+        <button class="jscolor {valueElement:'valueSpan', mode:'HS', position:'top', shadow: false, borderRadius: false, onFineChange:'changeStrokeColor(this)', value:'ff0000'}"></button>
+        <button class="jscolor {valueElement:'valueSpan', mode:'HS', position:'top', shadow: false, borderRadius: false, onFineChange:'changePointColor(this)', value:'0000ff'}"></button>
+      </div>
+    </div>
+    <div class="left grapharea" id="bargrapharea">
+      <canvas class="graph" id="bargraph" width="400" height="400"></canvas>
+      <div id="colors">
+        <button id="backbutton" onclick="backToSelection()"></button>
+        <button class="jscolor {valueElement:'valueSpan', mode:'HS', position:'top', shadow: false, borderRadius: false, onFineChange:'changeBarFillColor(this)', value:'00ff00'}"></button>
+        <button class="jscolor {valueElement:'valueSpan', mode:'HS', position:'top', shadow: false, borderRadius: false, onFineChange:'changeBarStrokeColor(this)', value:'ff0000'}"></button>
+      </div>
+    </div>
+    <div class="left grapharea" id="piegrapharea">
+      <canvas class="graph" id="piegraph" width="400" height="400"></canvas>
+      <div id="colors">
+        <button id="backbutton" onclick="backToSelection()"></button>
+      </div>
+    </div>
+    <div class="left grapharea" id="doughnutgrapharea">
+      <canvas class="graph" id="doughnutgraph" width="400" height="400"></canvas>
+      <div id="colors">
+        <button id="backbutton" onclick="backToSelection()"></button>
+      </div>
+    </div>
+    <div id="right">
+      <div id="example"></div>
+    </div>
+  </div>
+</body>
+</html>
